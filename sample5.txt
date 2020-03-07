@@ -1,0 +1,46 @@
+Calculates fibinacci numbers until the timer stops execution
+1	Load 0		//initialize fib(0)
+0
+16	Copy to y
+
+23	Call
+200	printFib()
+
+
+1	Load 1		//initialize fib(1)
+1
+14	Copy to x
+
+23	Call
+200	printFib()
+
+
+20	jump		//start calulation loop
+100 calcFibLoop()
+
+
+.100	calcFibLoop()
+15	copy from x 
+11	add y
+27	push x+y
+15	copy from x
+16	copy to y
+28	pop x+y
+14	copy to x
+23	Call
+200	printFib()
+20	jump
+100 calcFibLoop()
+
+.200
+9	print int	//printFib(n)
+1
+1	Load space 
+32
+9	Output space 
+2
+24
+
+
+.1000	//timer exits program
+50
